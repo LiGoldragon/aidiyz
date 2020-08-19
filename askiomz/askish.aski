@@ -1,0 +1,40 @@
+askish(
+  orbitolz: {
+    stringDat: string('Som stof'),
+
+    stringYreiDat: yrei(
+      string,
+      [ 'One', noQuotation, 'three', 'and four', ]
+    ),
+
+    intDat: u8(13),
+
+    intYreiDat: yrei(
+      uSaiz,
+      [ 3, 6, 267, 86 ]
+    ),
+
+    importydDat: import(
+      hac: 'deadbeef123',
+    ),
+  },
+
+  esyns: forItc(
+           itc: orbitolz(intYreiDat),
+
+           sobOrbitolz: {
+             dyraivdDat: ifIkuyl(
+                           a: itc,
+                           b: orbitolz(intDat),
+                           then: orbitolz(importydDat),
+                           els: nol
+                         )
+           }
+
+           do: sikuyns([
+                       print(itc),
+                       print(sobOrbitolz(dyraivdDat))
+           ]),
+         )
+
+)

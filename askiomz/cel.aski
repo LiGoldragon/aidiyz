@@ -1,5 +1,5 @@
 cel(
-  orbitolz: {
+  datomz: {
     stringDat: string('Som stof'),
 
     stringYreiDat: yrei(
@@ -17,24 +17,37 @@ cel(
     importydDat: import(
       hac: 'deadbeef123',
     ),
+
+    kyndicynylDat: kyndicynyl(
+      kyndicyn: ikualiti(
+        a: datomz(importydDat),
+        b: datomz(intDat),
+      ),
+      then: datomz(importydDat),
+      els: nol
+    ),
+
   },
 
-  esyns: forItc(
-           itc: orbitolz(intYreiDat),
+  kol: forItc(
+         itc: datomz(intYreiDat),
 
-           sobOrbitolz: {
-             dyraivdDat: ifIkuyl(
-                           a: itc,
-                           b: orbitolz(intDat),
-                           then: orbitolz(importydDat),
-                           els: nol
-                         )
-           }
+         lamdatomz: {
+           tcekIfIkual: kyndicynyl(
+                          kyndicyn: ikualiti(
+                            a: itc,
+                            b: datomz(kyndicynylDat),
+                          ),
+                          then: datomz(importydDat),
+                          els: nol
+                        ),
+         },
 
-           do: sikuyns([
-                       print(itc),
-                       print(sobOrbitolz(dyraivdDat))
-           ]),
-         )
+         kol: sikuyns([
+                      print(itc),
+                      print(lamdatomz(tcekIfIkual))
+         ]),
+
+       )
 
 )

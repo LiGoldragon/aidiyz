@@ -19,7 +19,7 @@ cel(
     ),
 
     kyndicynylDat: kyndicynyl(
-      kyndicyn: ikualiti(
+      kyndicyn: ikual(
         a: datomz(importydDat),
         b: datomz(intDat),
       ),
@@ -33,8 +33,8 @@ cel(
          itc: datomz(intYreiDat),
 
          lamdatomz: {
-           tcekIfIkual: kyndicynyl(
-                          kyndicyn: ikualiti(
+           tcekIfGreityr: kyndicynyl(
+                          kyndicyn: greityr(
                             a: itc,
                             b: datomz(kyndicynylDat),
                           ),
@@ -45,7 +45,7 @@ cel(
 
          kol: sikuyns([
                       print(itc),
-                      print(lamdatomz(tcekIfIkual))
+                      print(lamdatomz(tcekIfGreityr))
          ]),
 
        )

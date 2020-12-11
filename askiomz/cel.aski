@@ -24,26 +24,26 @@ cel(
         b: datomz(intDat),
       ),
       then: datomz(importydDat),
-      els: nol
+      els: non
     ),
 
   },
 
-  kol: forItc(
+  spin: forItc(
          itc: datomz(intYreiDat),
 
-         lamdatomz: {
+         datomz: {
            tcekIfGreityr: kyndicynyl(
                           kyndicyn: greityr(
                             a: itc,
                             b: datomz(kyndicynylDat),
                           ),
                           then: datomz(importydDat),
-                          els: nol
+                          els: non
                         ),
          },
 
-         kol: sikuyns([
+         spin: sikuyns([
                       print(itc),
                       print(lamdatomz(tcekIfGreityr))
          ]),

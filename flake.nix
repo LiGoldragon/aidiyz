@@ -11,7 +11,7 @@
       std = inputs.lib.lib // builtins;
 
       Atom = inputs.atom.mod;
-      inherit (Atom) importAtom;
+      inherit (inputs.atom) importAtom;
 
       exportJSON = name: data: std.toFile (name + ".json") (std.toJSON data);
 
@@ -19,9 +19,8 @@
     {
       atom = {
         introspection.simple = exportJSON "atom-module" (std.attrNames Atom);
-        introspection.trace = exportJSON "atom-module" (std.trace (Atom) null);
 
-        simple = importAtom { } (./. + "atom/simple/simple@.toml");
+        importSimpleAtom = importAtom { } (./. + "/atom/simple@.toml");
 
       };
 

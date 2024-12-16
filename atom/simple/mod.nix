@@ -2,13 +2,13 @@ let
   # TODO
   nixosHelloVMConfig = { };
 
-  pkgs = atom.nixpkgs {
-    inherit (atom) lib;
+  pkgs = use.nixpkgs {
+    inherit (use) lib;
     localSystem = "x86_64-linux";
   };
 
 in
 {
   Hello = pkgs.hello;
-  NixosHelloVM = atom.nixos-lib.eval-config-minimal nixosHelloVMConfig;
+  NixosHelloVM = use.nixos-lib.eval-config-minimal nixosHelloVMConfig;
 }

@@ -2,11 +2,11 @@
   "nodes": {
     "atom": {
       "locked": {
-        "lastModified": 1734376054,
-        "narHash": "sha256-Gn50Q4Hg5qP17EBWwkdjUaQf1B4Akbie9H7ZbLmsTFQ=",
+        "lastModified": 1734387578,
+        "narHash": "sha256-2uQAvMLjIWa7tgpyEjzzd+MdKI7MDsTpeKJZvsB9hfc=",
         "owner": "LiGoldragon",
         "repo": "atom",
-        "rev": "dfc92c4185a062a1f943804c01ec827825b2ac07",
+        "rev": "7ed6e83f261520074e70ce4f449e531022f7e287",
         "type": "github"
       },
       "original": {

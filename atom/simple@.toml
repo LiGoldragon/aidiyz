@@ -26,6 +26,3 @@ features = ["lib"]
 # default when `eka` cli is ready
 # fetcher = "native"
 fetcher = "npins"
-
-[fetcher.npins]
-root = "npins"

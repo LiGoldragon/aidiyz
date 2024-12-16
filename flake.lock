@@ -1,0 +1,42 @@
+{
+  "nodes": {
+    "atom": {
+      "locked": {
+        "lastModified": 1734376054,
+        "narHash": "sha256-Gn50Q4Hg5qP17EBWwkdjUaQf1B4Akbie9H7ZbLmsTFQ=",
+        "owner": "LiGoldragon",
+        "repo": "atom",
+        "rev": "dfc92c4185a062a1f943804c01ec827825b2ac07",
+        "type": "github"
+      },
+      "original": {
+        "owner": "LiGoldragon",
+        "repo": "atom",
+        "type": "github"
+      }
+    },
+    "lib": {
+      "locked": {
+        "lastModified": 1725932135,
+        "narHash": "sha256-lOth3aX2oK1KGNBIKJDDrVSW7DqZHkyT+FvjZ9r7bOk=",
+        "owner": "ekala-project",
+        "repo": "nix-lib",
+        "rev": "f3baad9fc4df31152e6150712204bb391214fdd7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ekala-project",
+        "repo": "nix-lib",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "atom": "atom",
+        "lib": "lib"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

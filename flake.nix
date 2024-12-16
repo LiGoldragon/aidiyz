@@ -10,7 +10,7 @@
     let
       std = inputs.lib.lib // builtins;
 
-      Atom = inputs.atom.mod;
+      Atom = inputs.atom.core;
       inherit (inputs.atom) importAtom;
 
       exportJSON = name: data: std.toFile (name + ".json") (std.toJSON data);

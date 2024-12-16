@@ -2,11 +2,21 @@
 id = "simple"
 version = "0.1.0"
 
-[fetch.pkgs]
+[fetch.nixpkgs]
 name = "nixpkgs"
 import = true
-args = [{ localSystem = "x86_64-linux" }]
 
+[fetch.nixos-lib]
+name = "nixpkgs"
+subdir = "nixos/lib"
+import = true
+
+[fetch.lib]
+name = "nixpkgs"
+subdir = "lib"
+import = true
+
+# TODO find out if this is necessary
 [core]
 features = ["std"]
 [std]

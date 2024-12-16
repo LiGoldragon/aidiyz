@@ -15,14 +15,16 @@
 
       exportJSON = name: data: std.toFile (name + ".json") (std.toJSON data);
 
+      atom = {
+        introspection.attrNames = exportJSON "atom-module" (std.attrNames Atom);
+        simple = importAtom { } (./. + "/atom/simple@.toml");
+      };
+
     in
     {
-      atom = {
-        introspection.simple = exportJSON "atom-module" (std.attrNames Atom);
+      inherit atom;
 
-        importSimpleAtom = importAtom { } (./. + "/atom/simple@.toml");
-
-      };
+      packages.x86_64-linux.default = atom.simple.hello;
 
     };
 }

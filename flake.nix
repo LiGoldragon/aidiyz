@@ -6,25 +6,15 @@
     lib.url = "github:ekala-project/nix-lib";
   };
 
-  outputs = inputs@{ self, ... }:
+  outputs =
+    inputs@{ self, atom, ... }:
     let
       std = inputs.lib.lib // builtins;
 
-      Atom = inputs.atom.core;
-      inherit (inputs.atom) importAtom;
-
       exportJSON = name: data: std.toFile (name + ".json") (std.toJSON data);
 
-      atom = {
-        introspection.attrNames = exportJSON "atom-module" (std.attrNames Atom);
-        simple = importAtom { } (./. + "/atom/simple@.toml");
-      };
+      simpleAtomManifestFile = ./. + "/atom/simple@.toml";
 
     in
-    {
-      inherit atom;
-
-      packages.x86_64-linux.default = atom.simple.hello;
-
-    };
+    atom.mkAtomicFlake { manifest = simpleAtomManifestFile; };
 }

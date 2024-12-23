@@ -7,7 +7,7 @@ path = "local-lib@.toml"
 
 [fetch.nixpkgs]
 name = "nixpkgs"
-import = true
+flake = true
 
 [fetch.nixos-lib]
 name = "nixpkgs"
@@ -23,6 +23,4 @@ import = true
 default = ["system"]
 
 [backend.nix]
-# default when `eka` cli is ready
-# fetcher = "native"
 fetcher = "npins"

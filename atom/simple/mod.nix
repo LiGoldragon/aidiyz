@@ -3,6 +3,8 @@ let
     inherit system;
   };
 
+  pkgsFromFlake = use.nixpkgs.legacyPackages.${system};
+
   mkStringPackage =
     string:
     pkgs.runCommand string { } ''
@@ -13,7 +15,9 @@ let
 in
 {
   Packages.default = pkgs.hello;
-  Packages.simpleString = mkStringPackage use.local-lib.simpleString;
+
+  Packages.stringPackage = mkStringPackage use.local-lib.simpleString;
   Packages.hashString = mkStringPackage use.local-lib.stringHash;
 
+  Packages.flakeHello = pkgsFromFlake.hello;
 }

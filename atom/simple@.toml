@@ -7,7 +7,7 @@ path = "local-lib@.toml"
 
 [fetch.nixpkgs]
 name = "nixpkgs"
-flake = true
+import = true
 
 [fetch.nixos-lib]
 name = "nixpkgs"

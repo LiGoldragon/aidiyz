@@ -9,6 +9,10 @@ path = "local-lib@.toml"
 name = "nixpkgs"
 import = true
 
+[fetch.nixpkgs-flake]
+name = "nixpkgs"
+flake = true
+
 [fetch.nixos-lib]
 name = "nixpkgs"
 subdir = "nixos/lib"

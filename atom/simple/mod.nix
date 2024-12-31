@@ -3,7 +3,7 @@ let
     inherit system;
   };
 
-  pkgsFromFlake = use.nixpkgs.legacyPackages.${system};
+  pkgsFromFlake = use.nixpkgs-flake.legacyPackages.${system};
 
   mkStringPackage =
     string:

@@ -14,6 +14,18 @@
       "revision": "43030fa180fdac07639f4fe6a7a5ddaf5a96e0a7",
       "url": "https://api.github.com/repos/NixOS/nixpkgs/tarball/25.05-pre",
       "hash": "0b96wqvk3hs98dhfrmdhqmx9ibac4kjpanpd1pig19jaglanqnxr"
+    },
+    "nixpkgs-atom": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "criome",
+        "repo": "nixpkgs-atom"
+      },
+      "branch": "main",
+      "revision": "59fcaf6ca2beb715fc6f88c245b7b711b0ecc969",
+      "url": "https://github.com/criome/nixpkgs-atom/archive/59fcaf6ca2beb715fc6f88c245b7b711b0ecc969.tar.gz",
+      "hash": "0ixjwwh7jj8xrjs8if3z00i7nsy4vsagg62hjrcq135v0vkbnnvb"
     }
   },
   "version": 3

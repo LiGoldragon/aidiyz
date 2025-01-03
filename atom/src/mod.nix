@@ -1,4 +1,6 @@
 let
+  pkgs-atom = use.nixpkgs-atom.pkgs;
+
   pkgs = use.nixpkgs {
     inherit system;
   };
@@ -29,15 +31,19 @@ let
 
 in
 {
-  Packages.default = pkgs.hello;
+  Packages = {
+    default = pkgs.hello;
 
-  Packages.stringPackage = mkStringPackage use.local-lib.simpleString;
-  Packages.hashString = mkStringPackage use.local-lib.stringHash;
+    stringPackage = mkStringPackage use.local-lib.simpleString;
+    hashString = mkStringPackage use.local-lib.stringHash;
 
-  Packages.flakeHello = pkgsFromFlake.hello;
+    flakeHello = pkgsFromFlake.hello;
 
-  Packages.assertedSchema = std.seq schemaCheckingPkg pkgs.hello;
+    assertedSchema = std.seq schemaCheckingPkg pkgs.hello;
 
-  Packages.failingPackageSeq = std.seq failingPackageCheck pkgs.hello;
-  Packages.packageCheck = std.seq packageCheck pkgs.hello;
+    failingPackageSeq = std.seq failingPackageCheck pkgs.hello;
+    packageCheck = std.seq packageCheck pkgs.hello;
+
+    atomPkgsHello = pkgs-atom.hello;
+  };
 }

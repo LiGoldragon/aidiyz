@@ -1,9 +1,12 @@
 [atom]
 id = "simple"
 version = "0.1.0"
+src = "src"
 
-[local.local-lib]
-path = "local-lib@.toml"
+[fetch.local-lib]
+local = true
+
+[fetch.nixpkgs-atom]
 
 [fetch.nixpkgs]
 name = "nixpkgs"

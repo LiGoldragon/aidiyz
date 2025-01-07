@@ -1,5 +1,18 @@
 let
+  lib-atom = use.nixpkgs-atom.lib;
   pkgs-atom = use.nixpkgs-atom.pkgs;
+
+  stringUsingAtomLib = lib-atom.concatMapStrings (x: "a" + x) [
+    "foo"
+    "bar"
+  ];
+
+  mkStringAtomPackage =
+    string:
+    pkgs.runCommand string { } ''
+      mkdir $out
+      echo ${string} > $out/string.txt
+    '';
 
   pkgs = use.nixpkgs {
     inherit system;
@@ -45,5 +58,6 @@ in
     packageCheck = std.seq packageCheck pkgs.hello;
 
     atomPkgsHello = pkgs-atom.hello;
+    atomStringPackage = mkStringAtomPackage stringUsingAtomLib;
   };
 }

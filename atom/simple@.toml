@@ -4,27 +4,27 @@ version = "0.1.0"
 src = "src"
 
 [fetch.local-lib]
-local = true
+type = "local"
 
 [fetch.nixpkgs-atom]
 
 [fetch.nixpkgs]
 name = "nixpkgs"
-import = true
+type = "import"
 
 [fetch.nixpkgs-flake]
 name = "nixpkgs"
-flake = true
+type = "flake"
 
 [fetch.nixos-lib]
 name = "nixpkgs"
+type = "import"
 subdir = "nixos/lib"
-import = true
 
 [fetch.lib]
 name = "nixpkgs"
+type = "import"
 subdir = "lib"
-import = true
 
 [features]
 default = ["system"]

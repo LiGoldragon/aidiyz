@@ -4,6 +4,7 @@
   inputs = {
     atom.url = "github:LiGoldragon/atom";
     lib.url = "github:nix-community/nixpkgs.lib";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-compat = {
       url = "github:edolstra/flake-compat";
       flake = false;

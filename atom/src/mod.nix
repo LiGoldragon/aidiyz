@@ -1,3 +1,4 @@
+# Simple atom
 let
   lib-atom = use.nixpkgs-atom.lib;
   pkgs-atom = use.nixpkgs-atom.pkgs;
@@ -9,7 +10,7 @@ let
 
   mkStringAtomPackage =
     string:
-    pkgs.runCommand string { } ''
+    pkgs-atom.runCommand string { } ''
       mkdir $out
       echo ${string} > $out/string.txt
     '';

@@ -21,18 +21,18 @@
     let
       inherit (inputs.lib) lib;
 
-      atomOutputs = atom.mkAtomicFlake {
-        manifest = ./. + "/atom/simple@.toml";
-        noSystemManifest = ./. + "/atom/local-lib@.toml";
-      };
-
-    in
-    atomOutputs
-    // {
       introspection = {
         self = lib.traceSeqN 2 (builtins.removeAttrs self [ "introspection" ]) true;
         outputs = lib.traceSeqN 3 (builtins.removeAttrs self.outputs [ "introspection" ]) true;
         inputs = lib.traceSeqN 2 self.inputs true;
       };
-    };
+
+      atomOutputs = atom.mkAtomicFlake {
+        inherit inputs;
+        manifest = ./. + "/atom/simple@.toml";
+        noSystemManifest = ./. + "/atom/local-lib@.toml";
+      };
+
+    in
+    atomOutputs // { inherit introspection; };
 }

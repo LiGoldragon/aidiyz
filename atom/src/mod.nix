@@ -60,5 +60,7 @@ in
 
     atomPkgsHello = pkgs-atom.hello;
     atomStringPackage = mkStringAtomPackage stringUsingAtomLib;
+
+    flake-atom = use.flake-atom.packages.${system};
   };
 }

@@ -1,0 +1,13 @@
+[atom]
+id = "flake-atom"
+version = "0.1.0"
+src = "src"
+
+[fetch.nixpkgs-atom]
+overrides = ["nixpkgs"]
+
+[features]
+default = ["system"]
+
+[backend.nix]
+fetcher = "flake-lock"

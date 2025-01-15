@@ -27,8 +27,13 @@ name = "nixpkgs"
 type = "import"
 subdir = "lib"
 
+[fetch.flake-atom]
+type = flake
+optional = true
+
 [features]
 default = ["system"]
+flake = ["flake-atom"]
 
 [backend.nix]
 fetcher = "npins"

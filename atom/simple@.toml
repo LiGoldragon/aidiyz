@@ -28,7 +28,7 @@ type = "import"
 subdir = "lib"
 
 [fetch.flake-atom]
-type = flake
+type = "flake"
 optional = true
 
 [features]

@@ -16,6 +16,10 @@ let
     );
   mkNamedPkgs = atom.mkPkgsWithNamedSrc (lib.getAttrs packageNames mod);
 
+  matchTests = {
+    tomlString = std.match "(^.*)@\.toml" "whatever@.toml";
+  };
+
 in
 {
   SimpleString = "A simple string";
@@ -25,4 +29,6 @@ in
     "foo"
     "bar"
   ];
+
+  Tests = matchTests;
 }

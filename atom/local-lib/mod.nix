@@ -16,8 +16,43 @@ let
     );
   mkNamedPkgs = atom.mkPkgsWithNamedSrc (lib.getAttrs packageNames mod);
 
+  matchManifestFile = string: std.match "(^.*@\.toml)" string;
+
+  fileNames = [
+    "whatever@.toml"
+    "somethingElse.nix"
+  ];
+
+  # Doesnt work - atom changes the directory structure
+  files = std.readDir ./.;
+
+  mkStructuredMatch =
+    name: value:
+    let
+      isFile = value == "file";
+      matchResult = matchManifestFile name;
+      isMatch = isFile && (matchResult != null);
+      result = {
+        inherit name;
+        value = std.head matchResult;
+      };
+    in
+    if isFile then result else { };
+
+  mkFileMatch =
+    name:
+    let
+      match = matchManifestFile name;
+    in
+    if (match != null) then match else [ ];
+
   matchTests = {
-    tomlString = std.match "(^.*)@\.toml" "whatever@.toml";
+    tomlString = matchManifestFile "whatever@.toml";
+    nonTomlString = matchManifestFile "somethingElse.nix";
+
+    matchedList = std.concatMap mkFileMatch fileNames;
+
+    structuredResult = std.mapAttrs mkStructuredMatch files;
   };
 
 in

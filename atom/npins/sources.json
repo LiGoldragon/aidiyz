@@ -23,9 +23,9 @@
         "repo": "nixpkgs-atom"
       },
       "branch": "main",
-      "revision": "b2614bae99d16a9b19a8911790f420edcd6c965c",
-      "url": "https://github.com/criome/nixpkgs-atom/archive/b2614bae99d16a9b19a8911790f420edcd6c965c.tar.gz",
-      "hash": "0f4jjfh780w79c90zc1mqjxnbr5zanmaai3wwhpgc4piq8mbpjm5"
+      "revision": "4e7f389cf322ace5a280d4661748fcf62282da96",
+      "url": "https://github.com/criome/nixpkgs-atom/archive/4e7f389cf322ace5a280d4661748fcf62282da96.tar.gz",
+      "hash": "18jlxs3g4z5i2g2g6a7py3kwxznw663wf65ya8smj241h7jyc60f"
     }
   },
   "version": 3

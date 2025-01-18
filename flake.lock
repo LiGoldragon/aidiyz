@@ -15,6 +15,40 @@
         "type": "github"
       }
     },
+    "atom_2": {
+      "locked": {
+        "lastModified": 1736785437,
+        "narHash": "sha256-i4t8MVbxfgyHlE4smn1XHctexdOJ+RnhDuX9fUyk2uk=",
+        "owner": "LiGoldragon",
+        "repo": "atom",
+        "rev": "9bc7ed2159e7eb88ff44c1c706d015e8c37a00a2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "LiGoldragon",
+        "repo": "atom",
+        "type": "github"
+      }
+    },
+    "flake-atom": {
+      "inputs": {
+        "atom": "atom_2",
+        "lib": "lib",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-9d+ozAYMMo7BWqfpqsRa6PnqoKEnMAs9hveP5Jofjy0=",
+        "path": "/nix/store/ixfxq89wb0x4kfv33va85r24rcx9a9n5-source/flake-atom",
+        "type": "path"
+      },
+      "original": {
+        "path": "/nix/store/ixfxq89wb0x4kfv33va85r24rcx9a9n5-source/flake-atom",
+        "type": "path"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -32,6 +66,21 @@
       }
     },
     "lib": {
+      "locked": {
+        "lastModified": 1736643958,
+        "narHash": "sha256-tmpqTSWVRJVhpvfSN9KXBvKEXplrwKnSZNAoNPf/S/s=",
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "rev": "1418bc28a52126761c02dd3d89b2d8ca0f521181",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "type": "github"
+      }
+    },
+    "lib_2": {
       "locked": {
         "lastModified": 1736643958,
         "narHash": "sha256-tmpqTSWVRJVhpvfSN9KXBvKEXplrwKnSZNAoNPf/S/s=",
@@ -65,8 +114,9 @@
     "root": {
       "inputs": {
         "atom": "atom",
+        "flake-atom": "flake-atom",
         "flake-compat": "flake-compat",
-        "lib": "lib",
+        "lib": "lib_2",
         "nixpkgs": "nixpkgs"
       }
     }

@@ -5,7 +5,16 @@
     atom.url = "github:LiGoldragon/atom";
     lib.url = "github:nix-community/nixpkgs.lib";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    flake-atom.url = "./flake-atom";
+
+    flake-atom = {
+      url = "./flake-atom";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs-atom.follows = "nixpkgs-atom";
+    };
+
+    nixpkgs-atom.url = "github:criome/nixpkgs-atom";
+    nixpkgs-atom.flake = false;
+
     flake-compat = {
       url = "github:edolstra/flake-compat";
       flake = false;

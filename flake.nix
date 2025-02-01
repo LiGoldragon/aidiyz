@@ -28,10 +28,11 @@
         inputs = lib.traceSeqN 2 self.inputs true;
       };
 
-      atomOutputs = atom.mkAtomicFlake {
+      atomOutputs = atom.mkCustomAtomicFlake {
         inherit inputs;
         manifest = ./. + "/atom/simple@.toml";
         noSystemManifest = ./. + "/atom/local-lib@.toml";
+        features = [ "flake" ];
       };
 
     in

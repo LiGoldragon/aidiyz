@@ -17,11 +17,11 @@
     },
     "atom_2": {
       "locked": {
-        "lastModified": 1736785437,
-        "narHash": "sha256-i4t8MVbxfgyHlE4smn1XHctexdOJ+RnhDuX9fUyk2uk=",
+        "lastModified": 1738074245,
+        "narHash": "sha256-TjhK4ANg4HdEF5lxrPasT5lAbwjZDYU2ItE060FJDUI=",
         "owner": "LiGoldragon",
         "repo": "atom",
-        "rev": "9bc7ed2159e7eb88ff44c1c706d015e8c37a00a2",
+        "rev": "92bd86713fa141a70e612ab6f53aa7269065ee7d",
         "type": "github"
       },
       "original": {
@@ -36,16 +36,19 @@
         "lib": "lib",
         "nixpkgs": [
           "nixpkgs"
+        ],
+        "nixpkgs-atom": [
+          "nixpkgs-atom"
         ]
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-9d+ozAYMMo7BWqfpqsRa6PnqoKEnMAs9hveP5Jofjy0=",
-        "path": "/nix/store/ixfxq89wb0x4kfv33va85r24rcx9a9n5-source/flake-atom",
+        "narHash": "sha256-qBi/PcpZFMTEjoebZ2YcEnGq5ekw2mi2gYmFumyz7Yo=",
+        "path": "/nix/store/kjfsdk07fiihnqfncrr8s545j9qqi94s-source/flake-atom",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/ixfxq89wb0x4kfv33va85r24rcx9a9n5-source/flake-atom",
+        "path": "/nix/store/kjfsdk07fiihnqfncrr8s545j9qqi94s-source/flake-atom",
         "type": "path"
       }
     },
@@ -111,13 +114,30 @@
         "type": "github"
       }
     },
+    "nixpkgs-atom": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1737809855,
+        "narHash": "sha256-Dhjm5YGBCFk1Ur4Yx4cx3P7O5/D3KPPEE7F88obuVKI=",
+        "owner": "criome",
+        "repo": "nixpkgs-atom",
+        "rev": "4e7f389cf322ace5a280d4661748fcf62282da96",
+        "type": "github"
+      },
+      "original": {
+        "owner": "criome",
+        "repo": "nixpkgs-atom",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "atom": "atom",
         "flake-atom": "flake-atom",
         "flake-compat": "flake-compat",
         "lib": "lib_2",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "nixpkgs-atom": "nixpkgs-atom"
       }
     }
   },

@@ -3,6 +3,7 @@ id = "simple"
 version = "0.1.0"
 src = "src"
 propagate = true
+system = true
 
 [fetch.local-lib]
 type = "local"
@@ -32,7 +33,6 @@ type = "flake"
 optional = true
 
 [features]
-default = ["system"]
 flake = ["flake-atom"]
 
 [backend.nix]

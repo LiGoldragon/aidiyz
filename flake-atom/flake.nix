@@ -12,7 +12,7 @@
 
   outputs =
     { atom, ... }@inputs:
-    atom.mkAtomicFlake {
+    atom.mkCustomAtomicFlake {
       inherit inputs;
       manifest = ./. + "/flake-atom@.toml";
     };

@@ -55,15 +55,26 @@ let
     structuredResult = std.mapAttrs mkStructuredMatch files;
   };
 
+  stringTests = {
+    SimpleString = "A simple string";
+    StringHash = std.hashString "sha256" mod.simpleString;
+
+    StringUsingLib = lib.concatMapStrings (x: "a" + x) [
+      "foo"
+      "bar"
+    ];
+  };
+
+  builtinTests = {
+    readNonNixFile = std.readFile (mod.outPath + "/foo");
+    readMissingFile = std.readFile (mod.outPath + "/bar");
+  };
+
 in
 {
-  SimpleString = "A simple string";
-  StringHash = std.hashString "sha256" mod.simpleString;
-
-  StringUsingLib = lib.concatMapStrings (x: "a" + x) [
-    "foo"
-    "bar"
-  ];
-
-  Tests = matchTests;
+  Tests = {
+    match = matchTests;
+    string = stringTests;
+    builtin = builtinTests;
+  };
 }

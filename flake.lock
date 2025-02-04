@@ -44,11 +44,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-EfMnl/V4ReQVV5pcLeA0e2oUJKEjbYbHg5VE89zXYMw=",
-        "path": "/nix/store/pifpswb45nf7lg8n7d1zw7lprsf8nvda-source/flake-atom",
+        "path": "/nix/store/zpf2zl312vjzgp049kxf7x3vnf46k5j0-source/flake-atom",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/pifpswb45nf7lg8n7d1zw7lprsf8nvda-source/flake-atom",
+        "path": "/nix/store/zpf2zl312vjzgp049kxf7x3vnf46k5j0-source/flake-atom",
         "type": "path"
       }
     },

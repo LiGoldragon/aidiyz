@@ -35,6 +35,7 @@
         self = lib.traceSeqN 2 (builtins.removeAttrs self [ "introspection" ]) true;
         outputs = lib.traceSeqN 3 (builtins.removeAttrs self.outputs [ "introspection" ]) true;
         inputs = lib.traceSeqN 2 self.inputs true;
+        description = (import (self.outPath + "/flake.nix")).description;
       };
 
       atomOutputs = atom.mkCustomAtomicFlake {

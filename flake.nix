@@ -8,6 +8,7 @@
 
     flake-atom = {
       url = "./flake-atom";
+      inputs.atom.follows = "atom";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.nixpkgs-atom.follows = "nixpkgs-atom";
     };

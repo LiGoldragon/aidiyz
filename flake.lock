@@ -2,11 +2,11 @@
   "nodes": {
     "atom": {
       "locked": {
-        "lastModified": 1736785437,
-        "narHash": "sha256-i4t8MVbxfgyHlE4smn1XHctexdOJ+RnhDuX9fUyk2uk=",
+        "lastModified": 1738074245,
+        "narHash": "sha256-TjhK4ANg4HdEF5lxrPasT5lAbwjZDYU2ItE060FJDUI=",
         "owner": "LiGoldragon",
         "repo": "atom",
-        "rev": "9bc7ed2159e7eb88ff44c1c706d015e8c37a00a2",
+        "rev": "92bd86713fa141a70e612ab6f53aa7269065ee7d",
         "type": "github"
       },
       "original": {
@@ -43,12 +43,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-qBi/PcpZFMTEjoebZ2YcEnGq5ekw2mi2gYmFumyz7Yo=",
-        "path": "/nix/store/kjfsdk07fiihnqfncrr8s545j9qqi94s-source/flake-atom",
+        "narHash": "sha256-EfMnl/V4ReQVV5pcLeA0e2oUJKEjbYbHg5VE89zXYMw=",
+        "path": "/nix/store/pifpswb45nf7lg8n7d1zw7lprsf8nvda-source/flake-atom",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/kjfsdk07fiihnqfncrr8s545j9qqi94s-source/flake-atom",
+        "path": "/nix/store/pifpswb45nf7lg8n7d1zw7lprsf8nvda-source/flake-atom",
         "type": "path"
       }
     },

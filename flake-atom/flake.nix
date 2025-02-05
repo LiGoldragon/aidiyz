@@ -6,8 +6,10 @@
     lib.url = "github:nix-community/nixpkgs.lib";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    nixpkgs-atom.url = "github:criome/nixpkgs-atom";
-    nixpkgs-atom.flake = false;
+    nixpkgs-atom = {
+      url = "github:criome/nixpkgs-atom";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs: inputs.atom.mkAtomicFlake inputs (./. + "/flake-atom@.toml");

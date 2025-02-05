@@ -13,8 +13,10 @@
       inputs.nixpkgs-atom.follows = "nixpkgs-atom";
     };
 
-    nixpkgs-atom.url = "github:criome/nixpkgs-atom";
-    nixpkgs-atom.flake = false;
+    nixpkgs-atom = {
+      url = "github:criome/nixpkgs-atom";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     flake-compat = {
       url = "github:edolstra/flake-compat";

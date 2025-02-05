@@ -10,11 +10,5 @@
     nixpkgs-atom.flake = false;
   };
 
-  outputs =
-    { atom, ... }@inputs:
-    atom.mkCustomAtomicFlake {
-      inherit inputs;
-      manifest = ./. + "/flake-atom@.toml";
-    };
-
+  outputs = inputs: inputs.atom.mkAtomicFlake inputs (./. + "/flake-atom@.toml");
 }

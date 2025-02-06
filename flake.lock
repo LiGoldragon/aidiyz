@@ -46,11 +46,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-eJ4GI1qJ7LdmIlAWnr943V7ZKiSQP3126SbDPJCvt3Y=",
-        "path": "/nix/store/wz5wxa3vij5g46l17jwgbdy670a192cx-source/flake-atom",
+        "path": "/nix/store/1dwl3f4sia44whsdh01br6a5c6sgwh8b-source/flake-atom",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/wz5wxa3vij5g46l17jwgbdy670a192cx-source/flake-atom",
+        "path": "/nix/store/1dwl3f4sia44whsdh01br6a5c6sgwh8b-source/flake-atom",
         "type": "path"
       }
     },
@@ -124,11 +124,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1738845325,
-        "narHash": "sha256-eDFP3V95rFTBJ7m/zUvDRh5P7Jo48pRaJ+s1uS5qh6I=",
+        "lastModified": 1738846350,
+        "narHash": "sha256-aapkFqNYESXOPNo2ppURvZEV9AKmh4v46CHRNpqzMyc=",
         "owner": "criome",
         "repo": "nixpkgs-atom",
-        "rev": "9a85b1d7933b1f35b229de5a5c38e6248d7ff665",
+        "rev": "7fde0d218d82b7754109b44e7bfe60cd472c9b2b",
         "type": "github"
       },
       "original": {
